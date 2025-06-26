@@ -9,15 +9,15 @@ function App(){
     return (
       <Entry
         key={element.id}
-        img={{
-          src:element.img.src
-          ,alt:element.img.alt}
-        }
+        img={element.img}
         title={element.title}
         country={element.country}
         googleMapsLink={element.googleMapsLink}
         dates={element.dates}
         text={element.text}
+
+        //other way is obj={element}
+        //and then in Entry.jsx we can updates each access of props to props.obj
       />
     )
   });
